@@ -6,62 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party Detail Form</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
-    <div class="partyDetail">
-        <div class="party-box">
-            <h2>Add Party Detail</h2>
-            <form class="partyDetail-form" action="/submit-party-details" method="POST">
-                <label for="partyName">Party Name: <span class="required">*</span></label><br>
-                <input type="text" id="partyName" name="partyName" placeholder="Enter Name" required><br>
+    <div class="container">
+        <div id="sidebar" class="sidebar">
+            <div class="logo">
+                <a href="">LOGO</a>
+                <a href="#" class="closebtn" onclick="toggleSidebar()">×</a>
+            </div>
+            <a href="main.html">Dashboard</a>
+            <a href="addpartydetail.html" >Party Detail</a>
+            <a href="#">Profile Entries</a>
+            <a href="#">Party Order</a>
+            <a href="#">All Reports</a>
 
-                <label for="address">Address:</label><br>
-                <textarea  id="address" name="address"  cols="100%" required></textarea><br>
-                <div class="detail">
-                    <div class="city">
-                        <label for="city">City <span class="required">*</span>:</label><br>
-                        <input type="text" id="city" name="city" required><br>
+        </div>
+        <div id="main">
+            <nav id="navbar" class="navbar">
+                <button id="btn" class="btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+                <div class="nav-items">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">DropDown <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="login.html">Log In</a>
+                            <a href="#">B</a>
+                            <a href="#">C</a>
+                        </div>
                     </div>
-                    <div class="state">
-                        <label for="state">State <span class="required">*</span>:</label><br>
-                        <input type="text" id="state" name="state" required><br>
-                    </div>
-                    <div class="country">
-                        <label for="country">Country <span class="required">*</span>:</label><br>
-                        <input type="text" id="country" name="country" required><br>
-                    </div>
-
+                    <a href="#" class="sign-in"> <i class="fa fa-sign-in-alt"></i>Sign In</a>
                 </div>
+            </nav>
+            <div class="partyDetail">
+                <div class="party-box">
+                    <h2>Add Party Detail</h2>
+                    <form class="partyDetail-form" action="/submit-party-details" method="POST">
+                        <label for="partyName">Party Name: <span class="required">*</span></label><br>
+                        <input type="text" id="partyName" name="partyName" placeholder="Enter Name" required><br>
 
-                <div class="detail">
-                    <div class="contact">
-                        <label for="contact">Contact <span class="required">*</span>:</label><br>
-                        <input type="text" id="contact" name="contact" required><br>
-                    </div>
-                    <div class="gstin">
-                        <label for="gstin">GSTIN:</label><br>
-                        <input type="text" id="gstin" name="gstin"><br>
-                    </div>
-                    <div class="reference">
-                        <label for="reference">Reference:</label><br>
-                        <input type="text" id="reference" name="reference"><br>
-                    </div>
+                        <label for="address">Address:</label><br>
+                        <textarea id="address" name="address" cols="100%" required></textarea><br>
+                        <div class="detail">
+                            <div class="city">
+                                <label for="city">City <span class="required">*</span>:</label><br>
+                                <input type="text" id="city" name="city" required><br>
+                            </div>
+                            <div class="state">
+                                <label for="state">State <span class="required">*</span>:</label><br>
+                                <input type="text" id="state" name="state" required><br>
+                            </div>
+                            <div class="country">
+                                <label for="country">Country <span class="required">*</span>:</label><br>
+                                <input type="text" id="country" name="country" required><br>
+                            </div>
+
+                        </div>
+
+                        <div class="detail">
+                            <div class="contact">
+                                <label for="contact">Contact <span class="required">*</span>:</label><br>
+                                <input type="text" id="contact" name="contact" required><br>
+                            </div>
+                            <div class="gstin">
+                                <label for="gstin">GSTIN:</label><br>
+                                <input type="text" id="gstin" name="gstin"><br>
+                            </div>
+                            <div class="reference">
+                                <label for="reference">Reference:</label><br>
+                                <input type="text" id="reference" name="reference"><br>
+                            </div>
+                        </div>
+
+                        <label>Party Type <span class="required">*</span>:</label><br>
+                        <input type="radio" id="supplier" name="partyType" value="Supplier" required>
+                        <label for="supplier">Supplier</label><br>
+                        <input type="radio" id="clients" name="partyType" value="Clients"
+                            title="Select if party is a client">
+                        <label for="clients">Clients</label><br>
+                        <input type="radio" id="Jobworker" name="partyType" value="Jobworker"
+                            title="Select if party is a jobworker">
+                        <label for="Jobworker">Jobworker</label><br>
+
+                        <button class="btn" type="submit">Submit</button>
+                    </form>
                 </div>
-
-                <label>Party Type <span class="required">*</span>:</label><br>
-                <input type="radio" id="supplier" name="partyType" value="Supplier" required>
-                <label for="supplier">Supplier</label><br>
-                <input type="radio" id="clients" name="partyType" value="Clients" title="Select if party is a client">
-                <label for="clients">Clients</label><br>
-                <input type="radio" id="Jobworker" name="partyType" value="Jobworker"
-                    title="Select if party is a jobworker">
-                <label for="Jobworker">Jobworker</label><br>
-
-                <button class="btn" type="submit">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>
