@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar" class="sidebar">
+            <div class="logo">
+                <a href="">LOGO</a>
+                <a href="#" class="closebtn" onclick="toggleSidebar()">×</a>
+            </div>
+            <a href="#">Dashboard</a>
+            <a href="#" onclick="loadPage('addpartydetail.html')">Party Detail</a>
+            <a href="#">Profile Entries</a>
+            <a href="#">Party Order</a>
+            <a href="#">All Reports</a>
+            
+        </div>
+        <div id="main">
+            <nav id="navbar" class="navbar">
+                <button class="btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+                <div class="nav-items">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">DropDown <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">A</a>
+                            <a href="#">B</a>
+                            <a href="#">C</a>
+                        </div>
+                    </div>
+                    <a href="#" class="sign-in"> <i class="fa fa-sign-in-alt"></i>Sign In</a>
+                </div>
+            </nav>
+            <div id="firstPage" class="first-page">
+                <div class='content'>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="data">
+                                <h2>Clients</h2>
+                                <p>3</p>
+                            </div>
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="card">
+                            <div class="data">
+                                <h2>JobWorkers</h2>
+                                <p>3</p>
+                            </div>
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div class="card">
+                            <div class="data">
+                                <h2>Supplier's</h2>
+                                <p>3</p>
+                            </div>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="card">
+                            <div class="data">
+                                <h2>Profile</h2>
+                                <p>3</p>
+                            </div>
+                            <i class="fa-solid fa-address-card"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="content-2">
+                    <button onclick="showOriginal()">Button 1</button>
+                    <button onclick="changeContent()">Button 2</button>
+                    <div class="separator"></div>
+                    <div id="content">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                        <div>D</div>
+                        <div>E</div>
+                        <div>F</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

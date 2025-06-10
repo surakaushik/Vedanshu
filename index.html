@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Content Example</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            margin-top: 20px;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        button {
+            border: none;
+            background-color: white;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        button:hover {
+            color: rgb(0, 98, 116);
+        }
+
+        .separator {
+            height: 1px;
+            background-color: #ccc;
+            margin: 10px 0;
+
+        }
+
+        #content>div {
+            display: block;
+            border: 1px solid black;
+            padding: 10px;
+            border: none;
+        }
+
+        .data-box {
+            background-color: #fad076;
+            border-radius: 5px;
+            margin: 0 5px;
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+
+        }
+
+        .data-box h2 {
+            font-size: large;
+            margin: 0;
+            background-color: #ee8814;
+            color: rgb(234, 237, 239);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .data-row {
+            color: #696464;
+            font-size: medium;
+            padding-top: 7px;
+        }
+
+        .data-row .label {
+            font-weight: bolder;
+            color: black;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <button onclick="showOriginal()">Button 1</button>
+    <button onclick="changeContent()">Button 2</button>
+    <div class="separator"></div>
+    <div id="content">
+        <div class="row-1">
+            <div class="data-box">
+                <h2>No:1</h2>
+
+                <div class="data-row">
+                    <span class="label">Client:</span> Mahadev Industries
+                </div>
+                <div class="data-row">
+                    <span class="label">Jobworker:</span> Shree Sai Works
+                </div>
+                <div class="data-row">
+                    <span class="label">Profile:</span> 18mm Aluminium Section
+                </div>
+                <div class="data-row">
+                    <span class="label">Send Quantity:</span> 2500 pcs
+                </div>
+                <div class="data-row">
+                    <span class="label">Receive Quantity:</span> 2400 pcs
+                </div>
+            </div>
+            <div class="data-box">
+                <h2>No:2</h2>
+
+                <div class="data-row">
+                    <span class="label">Client:</span> Mahadev Industries
+                </div>
+                <div class="data-row">
+                    <span class="label">Jobworker:</span> Shree Sai Works
+                </div>
+                <div class="data-row">
+                    <span class="label">Profile:</span> 18mm Aluminium Section
+                </div>
+                <div class="data-row">
+                    <span class="label">Send Quantity:</span> 2500 pcs
+                </div>
+                <div class="data-row">
+                    <span class="label">Receive Quantity:</span> 2400 pcs
+                </div>
+            </div>
+        </div>
+        <div row-2>
+            <div class="data-box">
+                <h2>No:3</h2>
+
+                <div class="data-row">
+                    <span class="label">Client:</span> Mahadev Industries
+                </div>
+                <div class="data-row">
+                    <span class="label">Jobworker:</span> Shree Sai Works
+                </div>
+                <div class="data-row">
+                    <span class="label">Profile:</span> 18mm Aluminium Section
+                </div>
+                <div class="data-row">
+                    <span class="label">Send Quantity:</span> 2500 pcs
+                </div>
+                <div class="data-row">
+                    <span class="label">Receive Quantity:</span> 2400 pcs
+                </div>
+            </div>
+            <div class="data-box">
+                <h2>No:4</h2>
+
+                <div class="data-row">
+                    <span class="label">Client:</span> Mahadev Industries
+                </div>
+                <div class="data-row">
+                    <span class="label">Jobworker:</span> Shree Sai Works
+                </div>
+                <div class="data-row">
+                    <span class="label">Profile:</span> 18mm Aluminium Section
+                </div>
+                <div class="data-row">
+                    <span class="label">Send Quantity:</span> 2500 pcs
+                </div>
+                <div class="data-row">
+                    <span class="label">Receive Quantity:</span> 2400 pcs
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        function changeContent() {
+            document.getElementById("content").innerHTML = `
+        <h2>New Content</h2>
+        <p>This content was loaded when Button 2 was clicked.</p>
+      `;
+        }
+
+        function showOriginal() {
+            document.getElementById("content").innerHTML = `
+        This is the original content of the page.
+      `;
+        }
+    </script>
+
+</body>
+
+</html>
