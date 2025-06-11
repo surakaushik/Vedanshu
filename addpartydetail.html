@@ -19,7 +19,7 @@
             </div>
             <a href="main.html">Dashboard</a>
             <a href="addpartydetail.html" >Party Detail</a>
-            <a href="#">Profile Entries</a>
+            <a href="partydetail.html">Profile Entries</a>
             <a href="#">Party Order</a>
             <a href="#">All Reports</a>
 
@@ -36,13 +36,13 @@
                             <a href="#">C</a>
                         </div>
                     </div>
-                    <a href="#" class="sign-in"> <i class="fa fa-sign-in-alt"></i>Sign In</a>
+                    <a href="#" class="sign-in"> <i class="fa-solid fa-circle-user"></i></a>
                 </div>
             </nav>
             <div class="partyDetail">
                 <div class="party-box">
                     <h2>Add Party Detail</h2>
-                    <form class="partyDetail-form" action="/submit-party-details" method="POST">
+                    <form id="userForm" class="partyDetail-form" >
                         <label for="partyName">Party Name: <span class="required">*</span></label><br>
                         <input type="text" id="partyName" name="partyName" placeholder="Enter Name" required><br>
 
@@ -89,7 +89,7 @@
                             title="Select if party is a jobworker">
                         <label for="Jobworker">Jobworker</label><br>
 
-                        <button class="btn" type="submit">Submit</button>
+                        <button class="btn" onclick="addUserDetails()" type="submit">Submit</button>
                     </form>
                 </div>
             </div>

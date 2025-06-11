@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Table</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar" class="sidebar">
+            <div class="logo">
+                <a href="">LOGO</a>
+                <a href="#" class="closebtn" onclick="toggleSidebar()">×</a>
+            </div>
+            <a href="main.html">Dashboard</a>
+            <a href="addpartydetail.html">Party Detail</a>
+            <a href="partydetail.html">Profile Entries</a>
+            <a href="#">Party Order</a>
+            <a href="#">All Reports</a>
+
+        </div>
+        <div id="main">
+            <nav id="navbar" class="navbar">
+                <button id="btn" class="btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+                <div class="nav-items">
+                    <div class="dropdown">
+                        <button class="dropdown-btn"><i class="fa fa-caret-down"></i> DropDown</i></button>
+                        <div class="dropdown-content">
+                            <a href="login.html">Log In</a>
+                            <a href="#">B</a>
+                            <a href="#">C</a>
+                        </div>
+                    </div>
+                    <a href="#" class="sign-in"><i class="fa-solid fa-circle-user"></i></a>
+                </div>
+            </nav>
+            <div class="party-details">
+                <div class="first-line">
+                    <h2>User Details Table</h2>
+                    <button>Add Party Details Here</button>
+                </div>
+                <div class="selector"></div>
+                <div class="second-line">
+                    <p>show details</p>
+                    <div class="search">
+                        <label for="search"> Search:</label>
+                        <input type="search" title="Search details">
+                    </div>
+
+                </div>
+                <div class="table">
+                    <table id="detailsTable">
+                        <thead>
+                            <tr>
+                                <th>Id <i class="fa-solid fa-sort-up"></i></th>
+                                <th>Name <i class="fa-solid fa-sort"></i></th>
+                                <th>Address <i class="fa-solid fa-sort"></i></th>
+                                <th>City <i class="fa-solid fa-sort"></i></th>
+                                <th>State <i class="fa-solid fa-sort"></i></th>
+                                <th>Country <i class="fa-solid fa-sort"></i></th>
+                                <th>Contact <i class="fa-solid fa-sort"></i></th>
+                                <th>GSTIN <i class="fa-solid fa-sort"></i></th>
+                                <th>Reference <i class="fa-solid fa-sort"></i></th>
+                                <th>Party Type <i class="fa-solid fa-sort"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <p>showing 1 to 6 entries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+
+
+</html>
